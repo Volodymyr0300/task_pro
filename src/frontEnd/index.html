@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskPro</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      HEADER
+      <div class="header-container container">
+        <nav class="header-nav">
+          <!-- ! mobile-nav -->
+          <div class="header__mobile-nav">
+            <button
+              class="button header-nav__btn-mobile"
+              data-action="js-open-btn-mobile-modal"
+              type="button"
+            >
+              <svg class="header-nav__mobile-icon-open" width="24" height="24">
+                <use href="./images/icons.svg#icon-menu-01-2"></use>
+              </svg>
+            </button>
+            <div class="header__backdrop js-backdrop">
+              <div class="header-modal">
+                <button
+                  class="header-nav__mobile-modal-icon js-modal-close"
+                  data-action="js-close-btn-mobile-modal"
+                  type="button"
+                >
+                  <svg class="" width="24" height="24">
+                    <use href="# ./images/icons.svg#icon-menu_40px"></use>
+                  </svg>
+                </button>
+
+                <p class="modal__title">Заголовок окна 1</p>
+              </div>
+            </div>
+            <!-- Подложка под модальным окном -->
+            <div class="footer__backdrop js-overlay-modal"></div>
+          </div>
+          <!-- ! theme -->
+          <div class="heaver-theme">
+            <p class="header-theme__title">Theme</p>
+            <div class="header-theme__dropdown">
+              <button class="button header-theme__btn" type="button">
+                <svg
+                  class="header-theme__mobile-icon-open"
+                  width="16"
+                  height="16"
+                >
+                  <use href="./images/icons.svg#icon-menu-01-2"></use>
+                </svg>
+              </button>
+              <ul class="header-theme__dropdown-menu">
+                <li>Пункт 1</li>
+                <li>Пункт 2</li>
+                <li>Пункт 3</li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main-container container">MAIN</div>
+    </main>
+    <footer class="footer">
+      <div class="footer-container container">FOOTER</div>
+    </footer>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>

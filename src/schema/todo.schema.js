@@ -9,12 +9,11 @@ const todoSchema = new Schema(
       enum: ["Low", "Medium", "Without", "High"],
       default: "Without",
     },
-    deadLine: { type: Date, required: true },
+    deadLine: { type: Date },
     status: {
       type: String,
       enum: ["To Do", "In progress", "Done"],
       default: "To Do",
-      required: true,
     },
   },
   { versionKey: false }

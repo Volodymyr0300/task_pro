@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "scss": "node-sass -w src/frontEnd/sass/main.scss src/frontEnd/css/styles.css",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js"
   },
@@ -12,11 +13,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@joi/date": "^2.1.0",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "mongoose": "^7.4.4"
+    "joi": "^17.10.0",
+    "mongoose": "^7.4.4",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
+    "node-sass": "^9.0.0",
     "nodemon": "^3.0.1"
   }
 }
