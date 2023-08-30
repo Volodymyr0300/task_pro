@@ -4,6 +4,7 @@ const todoSchema = new Schema(
   {
     title: { type: String, required: true },
     content: { type: String, required: true },
+    table: { type: String, required: true },
     priority: {
       type: String,
       enum: ["Low", "Medium", "Without", "High"],
