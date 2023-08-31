@@ -55,11 +55,36 @@ export const getTodosByTable = async (req, res) => {
   try {
     const { table } = req.params;
 
-    // console.log(table);
-
     const todosByTable = await ToDo.find({ table });
 
     res.send(todosByTable);
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+export const deleteTododsByTable = async (req, res) => {
+  try {
+    const { table } = req.params;
+
+    await ToDo.deleteMany({ table });
+
+    res.status(200).send(`todos by table ${table} were delete`);
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+export const updateTodosTableName = async (req, res) => {
+  try {
+    const { table } = req.params;
+
+    const todosByTable = await ToDo.updateMany(
+      { table },
+      { table: req.body.table }
+    );
+
+    res.status(200).send(todosByTable);
   } catch (error) {
     console.log(error.message);
   }

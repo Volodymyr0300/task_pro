@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskPro</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <section class="log-section">
+      <div class="log-section__container container">
+        <a class="log-section__reg-link link" href="./registration.html">
+          <span class="reg-section__reg-link-text">Registration</span>
+        </a>
+        <a class="log-section__reg-link link" href="./login.html">
+          <span class="log-section__reg-link-text">Log In</span>
+        </a>
+        <form class="log-section__form" action="">
+          <label class="log-section__label-email" for="email-log"></label>
+          <input
+            class="log-section__input-email"
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <label class="log-section__label-password" for="password-log"></label>
+          <input
+            class="log-section__input-password"
+            type="password"
+            name="password"
+            placeholder="Create a password"
+            required
+          />
+          <svg class="log-section__input-password-icon" width="" height="">
+            <use href=""></use>
+          </svg>
+          <button class="log-section__btn-submit button" type="submit">
+            <span class="log-section__btn-submit-text"></span>
+          </button>
+        </form>
+      </div>
+    </section>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
