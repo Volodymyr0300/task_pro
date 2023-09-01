@@ -1,6 +1,9 @@
 body {
   font-family: "Akaya Kanadaka", cursive;
   font-family: "Poppins", sans-serif;
+
+  margin: 0;
+  padding: 0;
 }
 ul,
 li {
@@ -14,7 +17,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+span {
   margin: 0;
   padding: 0;
   font-size: inherit;

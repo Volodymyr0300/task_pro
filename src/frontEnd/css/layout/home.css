@@ -1,12 +1,13 @@
 .home-section {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   background: radial-gradient(
     circle at 10% 20%,
     rgb(161, 255, 206) 0%,
     rgb(250, 255, 209) 90%
   );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
 }
 
 .home-section__container {

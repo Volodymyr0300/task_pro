@@ -29,47 +29,49 @@
   <body>
     <section class="reg-section">
       <div class="container reg-section__container">
-        <div>
-          <a class="reg-section__reg-link link" href="./registration.html">
-            <span class="reg-section__reg-link-text">Registration</span>
-          </a>
-          <a class="log-section__log-link link" href="./login.html">
-            <span class="log-section__reg-link-text">Log In</span>
-          </a>
-        </div>
+        <div class="reg-section__main-container">
+          <div class="reg-section__reg-link-container">
+            <a class="reg-section__reg-link link" href="./registration.html">
+              <span class="reg-section__reg-link-text">Registration</span>
+            </a>
+            <a class="log-section__log-link link" href="./login.html">
+              <span class="reg-section__log-link-text">Log In</span>
+            </a>
+          </div>
 
-        <form class="reg-section__form" action="">
-          <label class="reg-section__label-name" for="text-reg"></label>
-          <input
-            class="reg-section__input-name"
-            type="text"
-            name="text"
-            placeholder="Enter your name"
-            required
-          />
-          <label class="reg-section__label-email" for="email-reg"></label>
-          <input
-            class="reg-section__input-email"
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-          />
-          <label class="reg-section__label-password" for="password-reg"></label>
-          <input
-            class="reg-section__input-password"
-            type="password"
-            name="password"
-            placeholder="Create a password"
-            required
-          />
-          <svg class="reg-section__label-password-icon" width="" height="">
-            <use href=""></use>
-          </svg>
-          <button class="reg-section__btn-submit button" type="submit">
-            <span class="reg-section__btn-submit-text"></span>
-          </button>
-        </form>
+          <form class="reg-section__form" action="">
+            <label class="reg-section__label-name" for="text-reg"></label>
+            <input
+              class="reg-section__input-name"
+              type="text"
+              name="text"
+              placeholder="Enter your name"
+              required
+            />
+            <label class="reg-section__label-email" for="email-reg"></label>
+            <input
+              class="reg-section__input-email"
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <label
+              class="reg-section__label-password"
+              for="password-reg"
+            ></label>
+            <input
+              class="reg-section__input-password"
+              type="password"
+              name="password"
+              placeholder="Create a password"
+              required
+            />
+            <button class="reg-section__btn-submit" type="submit">
+              <span class="reg-section__btn-submit-text">Register Now</span>
+            </button>
+          </form>
+        </div>
       </div>
     </section>
     <script src="./main.js" type="module"></script>
