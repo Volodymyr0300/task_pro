@@ -148,6 +148,10 @@
   border-radius: 8px;
   background: #bedbb0;
 }
+.reg-section__btn-submit:hover,
+.reg-section__btn-submit:focus {
+  animation: vibrate 0.3s infinite;
+}
 
 .reg-section__btn-submit-text {
   color: #161616;

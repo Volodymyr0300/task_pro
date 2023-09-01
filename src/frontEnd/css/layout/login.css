@@ -125,6 +125,11 @@
   background: #bedbb0;
 }
 
+.log-section__btn-submit:hover,
+.log-section__btn-submit:focus {
+  animation: vibrate 0.3s infinite;
+}
+
 .log-section__btn-submit-text {
   color: #161616;
   text-align: center;
