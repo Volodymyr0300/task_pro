@@ -10,6 +10,7 @@
 @import url("./components/container.css");
 /* layout styler */
 @import url("./layout/home.css");
+@import url("./layout/registration.css");
 @import url("./layout/main.header.css");
 
 /* pages styles */

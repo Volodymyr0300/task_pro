@@ -1,0 +1,48 @@
+.reg-section {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(161, 255, 206) 0%,
+    rgb(250, 255, 209) 90%
+  );
+}
+.reg-section__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reg-section__reg-link {
+}
+.link {
+}
+.reg-section__reg-link-text {
+}
+.log-section__log-link {
+}
+.log-section__reg-link-text {
+}
+.reg-section__form {
+}
+.reg-section__label-name {
+}
+.reg-section__input-name {
+}
+.reg-section__label-email {
+}
+.reg-section__input-email {
+}
+.reg-section__label-password {
+}
+.reg-section__input-password {
+}
+.reg-section__label-password-icon {
+}
+.reg-section__btn-submit {
+}
+.button {
+}
+.reg-section__btn-submit-text {
+}

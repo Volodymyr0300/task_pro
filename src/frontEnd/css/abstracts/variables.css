@@ -1,3 +1,6 @@
 :root {
   --white-color: #ffffff;
+  --mobile-size: 375px;
+  --tablet-size: 767.98px;
+  --laptop-size: 1440px;
 }
