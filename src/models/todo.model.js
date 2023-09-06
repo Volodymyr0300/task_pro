@@ -9,4 +9,5 @@ export const todoSchema = joi.object({
   priority: joi.string().valid("Low", "Medium", "Without", "High"),
   deadLine: joi.date(),
   status: joi.string().valid("To Do", "In progress", "Done"),
+  userId: joi.string(),
 });

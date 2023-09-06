@@ -16,6 +16,7 @@ const todoSchema = new Schema(
       enum: ["To Do", "In progress", "Done"],
       default: "To Do",
     },
+    userId: { type: String, required: true, ref: "user" },
   },
   { versionKey: false }
 );

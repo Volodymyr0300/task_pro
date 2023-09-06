@@ -43,3 +43,11 @@ export const login = async (req, res) => {
 
   res.json({ token });
 };
+
+export const logout = async (req, res) => {
+  const { _id } = req.user;
+
+  await User.findByIdAndUpdate(_id, { token: null });
+
+  res.send("logout success");
+};
