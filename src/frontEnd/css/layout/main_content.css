@@ -1,9 +1,9 @@
 .main-right-sidebar-content {
   background: #1f1f1f;
   height: 702px;
+  padding: 10px 24px;
 }
 .main-right-sidebar-content__container {
-  padding: 10px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -52,6 +52,13 @@
   visibility: hidden;
   opacity: 0;
 }
+
+/* ! js-class */
+.js-main-left-sidebar__create-board-modal-submit-clicked {
+  visibility: visible;
+  opacity: 1;
+}
+
 .main-right-sidebar-content__btn-create-column-icon-container {
   width: 28px;
   height: 28px;
@@ -87,6 +94,11 @@
 
   margin-top: 247px;
   padding: 0 347px;
+}
+
+.js-main-right-sidebar-content__text {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .main-right-sidebar-content__text-board {
