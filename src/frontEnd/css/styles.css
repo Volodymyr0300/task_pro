@@ -13,6 +13,9 @@
 @import url("./layout/registration.css");
 @import url("./layout/login.css");
 @import url("./layout/main.css");
+@import url("./layout/main_sidebar.css");
+@import url("./layout/main_header.css");
+@import url("./layout/main_content.css");
 
 /* pages styles */
 /* themes styles */

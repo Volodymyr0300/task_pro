@@ -1,4 +1,5 @@
 .main {
+  margin: 0 auto;
 }
 .container {
   display: grid;
@@ -8,12 +9,17 @@
   height: 100vh;
 }
 .main__container {
+  display: flex;
+  /* padding: 0; */
+  margin: 0 auto;
 }
 .main__left-sidebar {
   background-color: #aaa;
-  height: 100vw;
 }
 .main__right-sidebar {
+  background-color: tomato;
+  flex: 84.7%;
+  min-height: 770px;
 }
 .main__right-sidebar-header {
   background-color: #ccc;

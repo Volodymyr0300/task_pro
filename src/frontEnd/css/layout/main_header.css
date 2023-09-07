@@ -1,0 +1,65 @@
+.main__right-sidebar-header {
+  background: #161616;
+}
+.list {
+}
+.main-right-sidebar-header__list {
+  min-width: 1180px;
+  min-height: 68px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: end;
+  padding: 18px 24px;
+}
+.item {
+}
+
+/* ! theme-container */
+.main-right-sidebar-header__theme-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.main-right-sidebar-header__theme-title {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.28px;
+}
+.main-right-sidebar-header__theme-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-right-sidebar-header__theme-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* ! user-container */
+.main-right-sidebar-header__user-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.main-right-sidebar-header__user-title {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.28px;
+}
+.main-right-sidebar-header__user-icon {
+  width: 32px;
+  height: 32px;
+}

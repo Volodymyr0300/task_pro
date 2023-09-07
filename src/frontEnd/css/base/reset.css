@@ -5,8 +5,8 @@ body {
   margin: 0;
   padding: 0;
 }
-ul,
-li {
+.list,
+.item {
   margin: 0;
   padding: 0;
   list-style: none;

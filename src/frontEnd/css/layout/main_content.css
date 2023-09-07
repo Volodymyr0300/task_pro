@@ -1,0 +1,100 @@
+.main-right-sidebar-content {
+  background: #1f1f1f;
+  height: 702px;
+}
+.main-right-sidebar-content__container {
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-right-sidebar-content__title {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.36px;
+
+  visibility: hidden;
+  opacity: 0;
+}
+.main-right-sidebar-content__filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.main-right-sidebar-content__filter-icon {
+  width: 16px;
+  height: 16px;
+}
+.main-right-sidebar-content__filter-title {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.28px;
+}
+
+.main-right-sidebar-content__btn-create-column {
+  border-radius: 8px;
+  background: #121212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 78px;
+
+  visibility: hidden;
+  opacity: 0;
+}
+.main-right-sidebar-content__btn-create-column-icon-container {
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+.main-right-sidebar-content__btn-create-column-icon {
+  width: 14px;
+  height: 14px;
+}
+.main-right-sidebar-content__btn-create-column-title {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.28px;
+}
+
+.main-right-sidebar-content__text {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+
+  margin-top: 247px;
+  padding: 0 347px;
+}
+
+.main-right-sidebar-content__text-board {
+  color: #bedbb0;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+}
