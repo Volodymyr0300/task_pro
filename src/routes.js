@@ -4,49 +4,66 @@ import {
   getTodoByID,
   deleteTodoByID,
   updateTodoByID,
-  getTodosByTable,
-  deleteTododsByTable,
-  updateTodosTableName,
 } from "./controllers/todo.controller.js";
 import { login, logout, register } from "./controllers/user.controler.js";
-import { authenticate } from "./middlewares/authenticate.js";
-import { isTableExist } from "./middlewares/isTableExist.js";
-import { isTodoExist } from "./middlewares/isTodoExist.js";
-import validateRequest from "./middlewares/validateRequest.js";
-import { todoSchema } from "./models/todo.model.js";
-import { loginSchema, userSchema } from "./models/user.model.js";
+import {
+  getBoards,
+  addBoard,
+  getBoardByID,
+  deleteBoardByID,
+  updateBoardByID,
+} from "./controllers/boards.controler.js";
+import {
+  authenticate,
+  isBoardExist,
+  isTodoExist,
+} from "./middlewares/index.js";
+import { validateRequest } from "./decorators/index.js";
+import { addTodoSchema } from "./schemas/todo.schemas.js";
+import { loginSchema, registerSchema } from "./schemas/user.schemas.js";
 
 export default function routes(app) {
   app.get("/healthcheck", (req, res) => {
     res.send("server is working");
   });
 
-  app.post("/api/todo", authenticate, validateRequest(todoSchema), createTodo);
+  app.post("/api/users/register", validateRequest(registerSchema), register);
+  app.post("/api/users/login", validateRequest(loginSchema), login);
+  app.post("/api/users/logout", authenticate, logout);
+
   app.get("/api/todos", authenticate, getTodos);
-  app.get("/api/todos/:todoId", authenticate, isTodoExist, getTodoByID);
-  app.delete("/api/todos/:todoId", authenticate, isTodoExist, deleteTodoByID);
-  app.patch("/api/todos/:todoId", authenticate, isTodoExist, updateTodoByID);
 
-  app.get(
-    "/api/todosByTable/:table",
+  app.post(
+    "/api/todos",
     authenticate,
-    isTableExist,
-    getTodosByTable
-  );
-  app.delete(
-    "/api/todosByTable/:table",
-    authenticate,
-    isTableExist,
-    deleteTododsByTable
-  );
-  app.patch(
-    "/api/todosByTable/:table",
-    authenticate,
-    isTableExist,
-    updateTodosTableName
+    validateRequest(addTodoSchema),
+    createTodo
   );
 
-  app.post("/api/user/register", validateRequest(userSchema), register);
-  app.post("/api/user/login", validateRequest(loginSchema), login);
-  app.post("/api/user/logout", authenticate, logout);
+  app.get("/api/todos/:id", authenticate, isTodoExist, getTodoByID);
+  app.delete("/api/todos/:id", authenticate, isTodoExist, deleteTodoByID);
+  app.put("/api/todos/:id", authenticate, isTodoExist, updateTodoByID);
+
+  app.get("/api/boards", authenticate, getBoards);
+
+  app.post("/api/boards", authenticate, addBoard);
+
+  app.get("/api/boards/:id", authenticate, isBoardExist, getBoardByID);
+
+  app.delete("/api/boards/:id", authenticate, isBoardExist, deleteBoardByID);
+
+  app.put("/api/boards/:id", authenticate, isBoardExist, updateBoardByID);
+
+  app.get("/", (req, res) => {
+    res.render("index");
+  });
+  app.get("/registration", (req, res) => {
+    res.render("registration");
+  });
+  app.get("/login", (req, res) => {
+    res.render("login");
+  });
+  app.get("/main", (req, res) => {
+    res.render("main");
+  });
 }

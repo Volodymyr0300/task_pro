@@ -1,0 +1,50 @@
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+  <defs>   
+    <symbol id="icon-menu-01-2" viewBox="0 0 32 32">
+        <path fill="#E6E6E6" d="M0 0h24v24H0z"/>
+        <path fill="#1F1F1F" d="M-20-18h375v812H-20z"/>
+        <path fill="#161616" d="M-20-18h375v60H-20z"/>
+        <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h18M3 6h18M3 18h18"/>
+    </symbol>    
+    <symbol id="logo" viewBox="0 0 32 32">
+        <path fill="#1f1f1f" d="M24 0H8a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h16a8 8 0 0 0 8-8V8a8 8 0 0 0-8-8z"/>
+        <path fill="#fff" d="M13.331 23.027c.245-1.272.453-2.61.747-3.949.145-.701-.032-.999-.815-.946s-1.657.027-2.49 0c-.833-.027-.982-.446-.502-1.044 2.363-2.918 4.753-5.8 7.134-8.674.267-.326.575-.558 1.014-.312s.349.549.276.915c-.263 1.339-.48 2.677-.77 3.989-.149.678.045.919.751.892a20.959 20.959 0 0 1 2.127 0c.403 0 .933-.21 1.141.339s-.231.781-.453 1.107a315.559 315.559 0 0 1-2.752 3.342 1579.8 1579.8 0 0 0-4.051 4.854c-.263.317-.557.571-1.005.41s-.353-.54-.353-.924z"/>
+    </symbol>
+    <symbol id="plus" viewBox="0 0 32 32">
+        <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.88" d="M16 6.667v18.667M6.667 16h18.667"/>
+    </symbol>
+    <symbol id="support-icon" viewBox="0 0 32 32">
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.88" d="M16 29.333c7.364 0 13.333-5.97 13.333-13.333S23.364 2.667 16 2.667 2.667 8.637 2.667 16c0 7.364 5.97 13.333 13.333 13.333z"/>
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.88" d="M12.12 12a4.003 4.003 0 0 1 6.834-1.249c.608.722.941 1.637.94 2.582 0 2.667-4 4-4 4M16 22.667h.02"/>
+    </symbol>
+    <symbol id="logout-icon" viewBox="0 0 32 32">
+        <path fill="none" stroke="#bedbb0" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.867 10.08c.413-4.8 2.88-6.76 8.28-6.76h.173c5.96 0 8.347 2.387 8.347 8.347v8.693c0 5.96-2.387 8.347-8.347 8.347h-.173c-5.36 0-7.827-1.933-8.267-6.653M2.667 16H19.84"/>
+        <path fill="none" stroke="#bedbb0" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.867 11.533 21.334 16l-4.467 4.467"/>
+    </symbol>
+    <symbol id="theme-icon" viewBox="0 0 32 32">
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.824" d="m7.529 12.235 7.529 7.529 7.529-7.529"/>
+    </symbol>
+    <symbol id="user-icon" viewBox="0 0 32 32">
+        <path fill="#1f1f1f" d="M3.765 0h24.471a3.765 3.765 0 0 1 3.765 3.765v24.471a3.765 3.765 0 0 1-3.765 3.765H3.765A3.765 3.765 0 0 1 0 28.236V3.765A3.765 3.765 0 0 1 3.765 0z"/>
+        <path fill="#151515" d="M21.49 14.745a5.333 5.333 0 1 1-10.666 0 5.333 5.333 0 0 1 10.666 0z"/>
+        <path fill="#151515" d="M29.06 32.853c0-1.723-.339-3.429-.999-5.02s-1.626-3.038-2.844-4.256a13.128 13.128 0 0 0-9.276-3.843c-1.723 0-3.429.339-5.02.999s-3.038 1.626-4.256 2.844a13.128 13.128 0 0 0-3.843 9.276h26.237z"/>
+    </symbol>
+    <symbol id="filter-icon" viewBox="0 0 32 32">
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M29.333 4H2.666l10.667 12.613v8.72L18.666 28V16.613L29.333 4z"/>
+    </symbol>
+    
+    <symbol id="create-board-modal-submit-icon" viewBox="0 0 32 32">
+        <path d="M25.143 0H6.857A6.857 6.857 0 0 0 0 6.857v18.286A6.857 6.857 0 0 0 6.857 32h18.286A6.857 6.857 0 0 0 32 25.143V6.857A6.857 6.857 0 0 0 25.143 0z"/>
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.143" d="M16 11.333v9.333M11.333 16h9.333"/>
+    </symbol>
+    
+    <symbol id="icon-close_40px" viewBox="0 0 32 32">
+        <path d="M23.733 10.304 22.229 8.8l-5.963 5.963L10.303 8.8l-1.504 1.504 5.963 5.963-5.963 5.963 1.504 1.504 5.963-5.963 5.963 5.963 1.504-1.504-5.963-5.963 5.963-5.963z"/>
+    </symbol>
+
+
+
+    <!--  -->
+  </defs>
+</svg>
+

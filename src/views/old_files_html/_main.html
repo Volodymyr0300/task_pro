@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskPro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
+      integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <section class="main">
+      <div class="container-main main-container">
+        <div class="main-left-sidebar">
+          <nav class="main-left-sidebar__nav">
+            <ul class="list main-left-sidebar__list">
+              <li class="item main-left-sidebar__item">
+                <div class="main-left-sidebar__logo-container">
+                  <svg class="main-left-sidebar__logo-icon">
+                    <use href="./images/icons.svg#logo"></use>
+                  </svg>
+                  <h3 class="home-section__logo-title">Task Pro</h3>
+                </div>
+              </li>
+              <li class="item main-left-sidebar__item">
+                <p class="main-left-sidebar__board-title">My boards</p>
+              </li>
+              <li class="item main-left-sidebar__item">
+                <div class="main-left-sidebar__create-board-container">
+                  <p class="main-left-sidebar__create-board-title">
+                    Create a new board
+                  </p>
+                  <button
+                    class="main-left-sidebar__create-board-btn"
+                    type="button"
+                    data-action="open-modal__create-board-btn"
+                  >
+                    <svg class="main-left-sidebar__create-board-btn-icon">
+                      <use href="./images/icons.svg#plus"></use>
+                    </svg>
+                  </button>
+                  <div
+                    class="main-left-sidebar__create-board-backdrop js-main-left-sidebar__create-board-backdrop"
+                  >
+                    <div class="main-left-sidebar__create-board-modal">
+                      <ul
+                        class="list main-left-sidebar__create-board-modal-list"
+                      >
+                        <li
+                          class="item main-left-sidebar__create-board-modal-item"
+                        >
+                          <p
+                            class="main-left-sidebar__create-board-modal-title"
+                          >
+                            New board
+                          </p>
+                        </li>
+                        <li
+                          class="item main-left-sidebar__create-board-modal-item"
+                        >
+                          <form
+                            class="main-left-sidebar__create-board-modal-form"
+                            action=""
+                          >
+                            <label
+                              class="main-left-sidebar__create-board-modal-form-label"
+                              for="create-name-of-board"
+                            ></label>
+                            <input
+                              class="main-left-sidebar__create-board-modal-form-input js-main-left-sidebar__create-board-modal-form-input"
+                              type="text"
+                              name="create-name-of-board"
+                              placeholder="Name of your board"
+                              required
+                            />
+                          </form>
+                        </li>
+                        <li
+                          class="item main-left-sidebar__create-board-modal-item"
+                        >
+                          <p
+                            class="main-left-sidebar__create-board-modal-icons-text1"
+                          >
+                            Icons
+                          </p>
+                        </li>
+                        <li
+                          class="item main-left-sidebar__create-board-modal-item"
+                        >
+                          <ul
+                            class="list main-left-sidebar__create-board-modal-icons-list"
+                          >
+                            <li
+                              class="item main-left-sidebar__create-board-modal-icons-item main-left-sidebar__create-board-modal-icons-item1"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-icons-item main-left-sidebar__create-board-modal-icons-item2"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-icons-item main-left-sidebar__create-board-modal-icons-item3"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-icons-item main-left-sidebar__create-board-modal-icons-item4"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-icons-item main-left-sidebar__create-board-modal-icons-item5"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-icons-item main-left-sidebar__create-board-modal-icons-item6"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-icons-item main-left-sidebar__create-board-modal-icons-item7"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-icons-item main-left-sidebar__create-board-modal-icons-item8"
+                            ></li>
+                          </ul>
+                        </li>
+                        <li
+                          class="item main-left-sidebar__create-board-modal-item"
+                        >
+                          <p
+                            class="main-left-sidebar__create-board-modal-icons-text2"
+                          >
+                            Background image
+                          </p>
+                        </li>
+                        <li
+                          class="item main-left-sidebar__create-board-modal-item"
+                        >
+                          <ul
+                            class="list main-left-sidebar__create-board-modal-backgorund-list1"
+                          >
+                            <li
+                              class="item main-left-sidebar__create-board-modal-background-item"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-background-item"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-background-item"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-background-item"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-background-item"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-background-item"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-background-item"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-background-item"
+                            ></li>
+                          </ul>
+                          <ul
+                            class="list main-left-sidebar__create-board-modal-backgorund-list2"
+                          >
+                            <li
+                              class="item main-left-sidebar__create-board-modal-background-item"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-background-item"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-background-item"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-background-item"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-background-item"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-background-item"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-background-item"
+                            ></li>
+                            <li
+                              class="item main-left-sidebar__create-board-modal-background-item"
+                            ></li>
+                          </ul>
+                        </li>
+                        <li
+                          class="item main-left-sidebar__create-board-modal-item"
+                        >
+                          <button
+                            class="main-left-sidebar__create-board-modal-submit"
+                            type="submit"
+                          >
+                            <svg
+                              class="main-left-sidebar__create-board-submit-icon2"
+                            >
+                              <use
+                                href="./images/icons.svg#create-board-modal-submit-icon"
+                              ></use>
+                            </svg>
+                            <span
+                              class="main-left-sidebar__create-board-submit-text"
+                              >Create</span
+                            >
+                          </button>
+                        </li>
+                      </ul>
+
+                      <button
+                        type="button"
+                        class="main-left-sidebar__close-board-btn"
+                        data-action="close-modal__create-board-btn"
+                      >
+                        <svg class="main-left-sidebar__close-board-btn-icon">
+                          <use href="./images/icons.svg#icon-close_40px"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="item main-left-sidebar__item">
+                <div class="main-left-sidebar__support-container">
+                  <img
+                    class="main-left-sidebar__support-image"
+                    src="./images/support.jpg"
+                    alt="support image"
+                  />
+                  <p class="main-left-sidebar__support-title">
+                    If you need help with
+                    <span class="main-left-sidebar__support-title-logo"
+                      >TaskPro</span
+                    >, check out our support resources or reach out to our
+                    customer support team.
+                  </p>
+                  <a class="link main-left-sidebar__support-link" href="#"
+                    ><svg class="main-left-sidebar__support-link-icon">
+                      <use href="./images/icons.svg#support-icon"></use>
+                    </svg>
+                    <p class="main-left-sidebar__support-link-title">
+                      Need help?
+                    </p></a
+                  >
+                </div>
+              </li>
+              <li class="item main-left-sidebar__item">
+                <a class="link main-left-sidebar__logout-link" href="#">
+                  <svg class="main-left-sidebar__logout-link-icon">
+                    <use href="./images/icons.svg#logout-icon"></use>
+                  </svg>
+                  <p class="main-left-sidebar__logout-link-title">Log out</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="main-right-sidebar">
+          <div class="main-right-sidebar-header">
+            <ul class="list main-right-sidebar-header__list">
+              <li class="item main-right-sidebar-header__theme-container">
+                <p class="main-right-sidebar-header__theme-title">Theme</p>
+                <div class="main-right-sidebar-header__theme-modal">
+                  <svg class="main-right-sidebar-header__theme-icon">
+                    <use href="./images/icons.svg#theme-icon"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="item main-right-sidebar-header__user-container">
+                <p class="main-right-sidebar-header__user-title">Volodymyr</p>
+                <svg class="main-right-sidebar-header__user-icon">
+                  <use href="./images/icons.svg#user-icon"></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
+          <div class="main-right-sidebar-content">
+            <div class="main-right-sidebar-content__container">
+              <p class="main-right-sidebar-content__title">Project office</p>
+              <div class="main-right-sidebar-content__filter-container">
+                <svg class="main-right-sidebar-content__filter-icon">
+                  <use href="./images/icons.svg#filter-icon"></use>
+                </svg>
+                <p class="main-right-sidebar-content__filter-title">Filters</p>
+              </div>
+            </div>
+            <button class="main-right-sidebar-content__btn-create-column">
+              <div
+                class="main-right-sidebar-content__btn-create-column-icon-container"
+              >
+                <svg class="main-right-sidebar-content__btn-create-column-icon">
+                  <use href="./images/icons.svg#plus"></use>
+                </svg>
+              </div>
+
+              <p class="main-right-sidebar-content__btn-create-column-title">
+                Add another column
+              </p>
+            </button>
+            <p class="main-right-sidebar-content__text">
+              Before starting your project, it is essential
+              <span class="main-right-sidebar-content__text-board"
+                >to create a board</span
+              >
+              to visualize and track all the necessary tasks and milestones.
+              This board serves as a powerful tool to organize the workflow and
+              ensure effective collaboration among team members.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { User } from "../schema/user.schema.js";
+import User from "../models/user.model.js";
 import "dotenv/config";
 import { HttpError } from "../helpers/HttpError.js";
 
@@ -31,3 +31,5 @@ export const authenticate = async (req, res, next) => {
     next(HttpError(401));
   }
 };
+
+export default authenticate;

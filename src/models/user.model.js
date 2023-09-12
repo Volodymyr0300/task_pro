@@ -1,20 +1,23 @@
-import coreJoi from "joi";
-import joiDate from "@joi/date";
-import { emailRegexp } from "../schema/user.schema.js";
-const joi = coreJoi.extend(joiDate);
+import { Schema, model } from "mongoose";
+import { handleValidateError, runUpdateValidators } from "./hooks.js";
 
-export const userSchema = joi.object({
-  name: joi.string().required("Name required"),
-  email: joi
-    .string()
-    .pattern(emailRegexp)
-    .required("Email required")
-    .messages({ "string.pattern.base": "Email should be valid." }),
-  password: joi.string().required("Password required"),
-  token: joi.string(),
-});
+export const emailRegexp = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
-export const loginSchema = joi.object({
-  email: joi.string().pattern(emailRegexp).required(),
-  password: joi.string().min(6).required(),
-});
+const userSchema = new Schema(
+  {
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true, match: emailRegexp },
+    password: { type: String, required: true },
+    token: String,
+  },
+  { versionKey: false, timestamps: true }
+);
+
+userSchema.post("save", handleValidateError);
+
+userSchema.pre("findOneAndUpdate", runUpdateValidators);
+
+userSchema.post("findOneAndUpdate", handleValidateError);
+
+const User = model("user", userSchema);
+export default User;
