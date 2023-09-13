@@ -32,31 +32,26 @@
                 class="main-left-sidebar__create-board-backdrop js-main-left-sidebar__create-board-backdrop"
               >
                 <div class="main-left-sidebar__create-board-modal">
-                  <ul class="list main-left-sidebar__create-board-modal-list">
-                    <li class="item main-left-sidebar__create-board-modal-item">
-                      <p class="main-left-sidebar__create-board-modal-title">
-                        New board
-                      </p>
-                    </li>
-                    <li class="item main-left-sidebar__create-board-modal-item">
-                      <form
-                        class="main-left-sidebar__create-board-modal-form"
-                        action=""
-                        id="create-board-form"
-                      >
-                        <label
-                          class="main-left-sidebar__create-board-modal-form-label"
-                          for="create-name-of-board"
-                        ></label>
-                        <input
-                          class="main-left-sidebar__create-board-modal-form-input js-main-left-sidebar__create-board-modal-form-input"
-                          type="text"
-                          name="create-name-of-board"
-                          placeholder="Name of your board"
-                          required
-                        />
-                      </form>
-                    </li>
+
+                  <form
+                    class="main-left-sidebar__create-board-modal-form"
+                    action=""
+                    id="create-board-form"
+                  >
+                    <p class="main-left-sidebar__create-board-modal-title">
+                      New board
+                    </p>
+                    <label
+                      class="main-left-sidebar__create-board-modal-form-label"
+                      for="create-name-of-board"
+                    ></label>
+                    <input
+                      class="main-left-sidebar__create-board-modal-form-input js-main-left-sidebar__create-board-modal-form-input"
+                      type="text"
+                      name="create-name-of-board"
+                      placeholder="Name of your board"
+                      required
+                    />
                     <li class="item main-left-sidebar__create-board-modal-item">
                       <p
                         class="main-left-sidebar__create-board-modal-icons-text1"
@@ -176,7 +171,7 @@
                         >Create</span>
                       </button>
                     </li>
-                  </ul>
+                  </form>
 
                   <button
                     type="button"
@@ -190,6 +185,9 @@
                 </div>
               </div>
             </div>
+          </li>
+          <li class="item main-left-sidebar__item">
+            <ul class="main-left-sidebar__item-list" id="board-list"></ul>
           </li>
           <li class="item main-left-sidebar__item">
             <div class="main-left-sidebar__support-container">

@@ -5,7 +5,12 @@ import {
   deleteTodoByID,
   updateTodoByID,
 } from "./controllers/todo.controller.js";
-import { login, logout, register } from "./controllers/user.controler.js";
+import {
+  login,
+  logout,
+  register,
+  current,
+} from "./controllers/user.controler.js";
 import {
   getBoards,
   addBoard,
@@ -26,6 +31,8 @@ export default function routes(app) {
   app.get("/healthcheck", (req, res) => {
     res.send("server is working");
   });
+
+  app.get("/api/users/current", authenticate, current); // request for token
 
   app.post("/api/users/register", validateRequest(registerSchema), register);
   app.post("/api/users/login", validateRequest(loginSchema), login);

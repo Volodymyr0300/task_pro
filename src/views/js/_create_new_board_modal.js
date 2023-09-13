@@ -73,6 +73,7 @@ function createBoardForm(e) {
     .post("/boards", boardData)
     .then(({ data }) => {
       console.log("Your data was ok:", data);
+      onCloseModal();
     })
     .catch((error) => {
       console.error("Error:", error.message);
@@ -94,11 +95,3 @@ function onSubmitCreateBoardClick() {
 
   document.body.classList.remove("main-left-sidebar__board-show-modal");
 }
-
-function onInputChange(event) {
-  event.currentTarget.value === ""
-    ? console.log("Input is empty")
-    : console.log("Input is not empty") && onSubmitCreateBoardClick();
-}
-
-refs.input?.addEventListener("input", onInputChange);

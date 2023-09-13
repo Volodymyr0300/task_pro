@@ -16,7 +16,7 @@ export const iconsEnum = [
 
 const boardSchema = new Schema(
   {
-    name: { type: String, required: true },
+    name: { type: String, required: true, unique: true },
     icon: { type: String, enum: iconsEnum, required: true },
     background: {
       type: String,

@@ -1,4 +1,5 @@
 import User from "../models/user.model.js";
+import Board from "../models/board.model.js";
 import bcryptjs from "bcryptjs";
 import jwt from "jsonwebtoken";
 import "dotenv/config";
@@ -37,11 +38,13 @@ export const login = async (req, res) => {
 
   const payload = { id: user._id };
 
-  const token = jwt.sign(payload, SECRET_KEY, { expiresIn: "10h" });
+  const token = jwt.sign(payload, SECRET_KEY, { expiresIn: "23h" });
 
   await User.findByIdAndUpdate(user._id, { token });
 
-  res.json({ token, name: user.name });
+  const boards = await Board.find({ userId: user._id });
+
+  res.json({ token, name: user.name, boards });
 };
 
 export const logout = async (req, res) => {
@@ -50,4 +53,12 @@ export const logout = async (req, res) => {
   await User.findByIdAndUpdate(_id, { token: "" });
 
   res.send("logout success");
+};
+
+export const current = async (req, res) => {
+  const { name, _id: userId } = req.user;
+
+  const boards = await Board.find({ userId });
+
+  res.json({ name, boards });
 };

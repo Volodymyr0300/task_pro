@@ -13,7 +13,7 @@ export const getBoards = async (req, res) => {
   }
 };
 
-export const addBoard = async (req, res) => {
+export const addBoard = async (req, res, next) => {
   try {
     const userId = req.user._id;
 
@@ -22,6 +22,7 @@ export const addBoard = async (req, res) => {
     res.status(201).json(result);
   } catch (error) {
     console.log(error.message);
+    next(error);
   }
 };
 
@@ -36,7 +37,7 @@ export const getBoardByID = async (req, res) => {
   return res.json({ board, todos });
 };
 
-export const getTodosByTable = async (req, res) => {
+export const getTodosByTable = async (req, res, next) => {
   try {
     const userId = req.user._id;
     const { table } = req.params;
@@ -46,10 +47,11 @@ export const getTodosByTable = async (req, res) => {
     res.send(todosByTable);
   } catch (error) {
     console.log(error.message);
+    next(error);
   }
 };
 
-export const deleteBoardByID = async (req, res) => {
+export const deleteBoardByID = async (req, res, next) => {
   try {
     const userId = req.user._id;
     const { id } = req.params;
@@ -61,10 +63,11 @@ export const deleteBoardByID = async (req, res) => {
     res.send(`todos by board ${id} were delete`);
   } catch (error) {
     console.log(error.message);
+    next(error);
   }
 };
 
-export const updateBoardByID = async (req, res) => {
+export const updateBoardByID = async (req, res, next) => {
   try {
     const userId = req.user._id;
     const { id } = req.params;
@@ -76,5 +79,6 @@ export const updateBoardByID = async (req, res) => {
     res.json(result);
   } catch (error) {
     console.log(error.message);
+    next(error);
   }
 };

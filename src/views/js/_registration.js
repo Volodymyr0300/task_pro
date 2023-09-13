@@ -1,12 +1,10 @@
 import instance from "./_instance.js";
 
-// Отримання посилань на елементи DOM
 const regForm = document.querySelector("#form-reg");
 const nameInput = document.querySelector(".reg-section__input-name");
 const emailInput = document.querySelector(".reg-section__input-email");
 const passwordInput = document.querySelector(".reg-section__input-password");
 
-// Додавання обробника подій на кнопку
 regForm?.addEventListener("submit", (e) => {
   e.preventDefault();
   // Отримання значень з полів вводу
@@ -14,13 +12,11 @@ regForm?.addEventListener("submit", (e) => {
   const email = emailInput.value.trim();
   const password = passwordInput.value.trim();
 
-  // Перевірка, чи всі поля заповнені
   if (!name || !email || !password) {
     alert("Будь ласка, заповніть всі поля.");
     return;
   }
 
-  // Створення об'єкта з даними для відправки на сервер
   const userData = {
     name,
     email,
@@ -38,7 +34,6 @@ regForm?.addEventListener("submit", (e) => {
       alert(error.message);
     });
 
-  // Відправка POST-запиту на сервер
   //   fetch("http://localhost:3000/api/users/register", {
   //     method: "POST",
   //     headers: {
