@@ -1,4 +1,5 @@
 import instance from "./_instance.js";
+import { onBoardClick } from "./board.js";
 
 const refs = {
   openModalBtn: document.querySelector(
@@ -69,10 +70,35 @@ function createBoardForm(e) {
     background,
   };
 
+  const createBoardEl = (name) =>
+    `<li class="item main-left-sidebar__item-item"><span class="main-left-sidebar__item-item-board-name">${name}</span></li>`;
+
   instance
     .post("/boards", boardData)
     .then(({ data }) => {
       console.log("Your data was ok:", data);
+      const boardList = document.querySelector("#board-list");
+      boardList.insertAdjacentHTML("beforeend", createBoardEl(data.name));
+
+      const boardName = boardList.querySelector(
+        ".main-left-sidebar__item-item:last-child .board-el"
+      );
+      console.log(boardName);
+
+      console.log(localStorage.getItem("boards"));
+
+      const boardsFromLocalStorageArr = JSON.parse(
+        // отримую з локал стореджу до створення
+        localStorage.getItem("boards")
+      );
+      console.log(boardsFromLocalStorageArr);
+
+      boardsFromLocalStorageArr.push(data); // додаю борду що прийшла з бекенду
+
+      console.log(boardsFromLocalStorageArr);
+
+      localStorage.setItem("boards", JSON.stringify(boardsFromLocalStorageArr)); // додаю в локал сторадж
+
       onCloseModal();
     })
     .catch((error) => {
